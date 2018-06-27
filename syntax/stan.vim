@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	Stan (http://mc-stan.org)
-" Maintainer:	J. Guo <guojq28@gmail.com> 
-" Last Change:  Aug 7 2016
+" Maintainer:	F. Held <crazyvision@gmail.com> 
+" Last Change:  Jun 27 2018
 " Filenames:	*.stan
 " URL:		
 
@@ -78,21 +78,20 @@ syn match equalSign /=/
 syn keyword stanLU lower upper nextgroup=equalSign skipwhite
 
 syn match leftParen /(/
-syn keyword stanDistributions normal uniform multi_normal inv_gamma 
-syn keyword stanDistributions normal_log uniform_log multi_normal_log inv_gamma_log 
-syn keyword stanDistributions categorical categorical_log  
-syn keyword stanDistributions normal_trunc_l normal_trunc_h  normal_trunc_lh exponential inv_chi_square student cauchy  
-syn keyword stanDistributions normal_trunc_l_log normal_trunc_h_log  normal_trunc_lh_log exponential_log inv_chi_square_log student_log cauchy_log  
-syn keyword stanDistributions double_exponential weibull logistic lognormal dirichlet skew_normal
-syn keyword stanDistributions double_exponential_log weibull_log logistic_log lognormal_log dirichlet_log 
-syn keyword stanDistributions bernoulli binomial neg_binomial beta_binomial poisson 
-syn keyword stanDistributions bernoulli_log binomial_log neg_binomial_log beta_binomial_log poisson_log 
-syn keyword stanDistributions bernoulli_logit bernoulli_logit_log 
-syn keyword stanDistributions wishart inv_wishart 
-syn keyword stanDistributions wishart_log inv_wishart_log  exp_mod_normal frechet scaled_inv_chi_square
+syn keyword stanDistributions bernoulli bernoulli_logit binomial binomial_logit 
+syn keyword stanDistributions beta_binomial hypergeometric categorial categorial_logit 
+syn keyword stanDistributions ordered_logistic ordered_probit neg_binomial 
+syn keyword stanDistributions neg_binomial_2 neg_binomial_2_log poisson poisson_log 
+syn keyword stanDistributions multinomial 
+syn keyword stanDistributions normal std_normal exp_mod_normal skew_normal student_t 
+syn keyword stanDistributions cauchy double_exponential logistic gumbel lognormal 
+syn keyword stanDistributions chi_square inv_chi_square scaled_inv_chi_square 
+syn keyword stanDistributions exponential inv_gamma weibull frechet rayleigh wiener 
+syn keyword stanDistributions pareto pareto_type_2 von_mises uniform multi_normal 
+syn keyword stanDistributions multi_normal_prec multi_normal_cholesky multi_gp 
+syn keyword stanDistributions multi_gp_cholesky multi_student_t gaussian_dlm_obs 
+syn keyword stanDistributions dirichlet lkj_corr lkj_corr_cholesky wishart inv_wishart 
 
-syn keyword stanDistributions normal_cdf_log exponential_cdf_log  weibull_cdf_log gamma_cdf_log 
-syn keyword stanDistributions normal_ccdf_log exponential_ccdf_log  weibull_ccdf_log gamma_ccdf_log 
 " only highight gamma beta such that there is '(' after
 " that indicating it is distribution.
 " For the time being, not define others. `normal` should 
